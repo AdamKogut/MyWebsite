@@ -4,8 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import "./About.css";
 import "./Contact.css";
-
-const keys = require("../../../SecretKeys/Keys");
+import Axios from "axios";
 
 class Contact extends Component {
   constructor(props) {
@@ -33,7 +32,7 @@ class Contact extends Component {
       axios
         .post("https://api.emailjs.com/api/v1.0/email/send", {
           template_params: this.state,
-          user_id: keys.emailjs,
+          user_id: this.keys.emailjs,
           template_id: template_id,
           service_id: service_id
         })
@@ -61,6 +60,15 @@ class Contact extends Component {
 
   changeValue = e => {
     this.setState({ [e.target.name]: e.target.value });
+  };
+
+  keys = {};
+
+  componentDidMount = () => {
+    Axios.post("/api/keys", {}).then(response => {
+      this.keys.emailjs = response.data.ejs;
+      this.keys.recaptcha = response.data.rca;
+    });
   };
 
   render() {
@@ -145,7 +153,7 @@ class Contact extends Component {
             <Col sm={{ size: 10, offset: 2 }}>
               <ReCAPTCHA
                 ref={this.recaptchaRef}
-                sitekey={keys.recaptcha}
+                sitekey={this.keys.recaptcha}
                 onChange={e => this.setState({ captcha: e })}
                 onExpired={() => this.setState({ captcha: null })}
               />
