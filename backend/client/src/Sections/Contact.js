@@ -65,7 +65,7 @@ class Contact extends Component {
   keys = {};
 
   componentDidMount = () => {
-    Axios.post("/api/keys", {}).then(response => {
+    Axios.get("/api/keys").then(response => {
       this.keys.emailjs = response.data.ejs;
       this.keys.recaptcha = response.data.rca;
     });
