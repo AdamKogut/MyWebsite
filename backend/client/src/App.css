@@ -1,0 +1,52 @@
+:root{
+  /* --color1:#F9F6F6;
+  --color2:#808280;
+  --color3:#9F90A6;
+  --color4:#7C7A7A;
+  --color5:#241A24; */
+  --color1:#FFFFFF;
+  --color2:rgb(74, 99, 44);
+  --color3:#6B6E70;
+  --color4:#606d6a;
+  --color5:#222629;
+} 
+
+.App {
+  text-align: center;
+  margin-left:10%;
+  /* background-color:var(--color1); */
+}
+
+.scrolling-div {
+  overflow-y: auto;
+  width:100vw;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.scrolling-div-mobile {
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-left:-20%;
+  padding-left:20%;
+}

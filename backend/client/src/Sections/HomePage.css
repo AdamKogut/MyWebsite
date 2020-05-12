@@ -1,0 +1,52 @@
+@font-face {
+  font-family: name-font;
+  src: url("../Fonts/Casablanca\ Noir\ Personal\ Use.ttf");
+}
+
+.home-background-image {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left:0;
+  z-index: 10;
+}
+
+.homepage-main-name {
+  font-family: name-font;
+  position: relative;
+  padding-top: 23vh;
+  height: 90vh;
+  z-index: 300;
+}
+
+.homepage-name {
+  font-size: 20vh;
+  color: #fff;
+  z-index: 300;
+}
+
+.homepage-title {
+  font-size: 8vh;
+  color: #c0c0c0;
+  z-index: 300;
+}
+
+@media (min-height: 1300px) {
+  .homepage-name { font-size: 260px; }
+  .homepage-title { font-size: 104px; }
+}
+
+.container-div{
+  height:100vh;
+  margin-left: -25%;
+  width:100;
+
+}
+
+.home-background-image-mobile {
+  position: absolute;
+  left:0;
+  z-index: 10;
+  width:200vw;
+  height:100vh;
+}
