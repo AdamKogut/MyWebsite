@@ -72,6 +72,9 @@ class Contact extends Component {
   };
 
   render() {
+    if (this.keys.recaptcha == null) {
+      return null;
+    }
     let width =
       window.innerWidth ||
       document.documentElement.clientWidth ||
