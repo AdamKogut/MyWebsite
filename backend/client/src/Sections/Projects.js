@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Row } from "reactstrap";
 import PairDesc from "./ProjectDesc/PairDesc";
-import CarDesc from "./ProjectDesc/carDesc";
+import CarDesc from "./ProjectDesc/CarDesc";
 import PersonalDesc from "./ProjectDesc/PersonalDesc";
 import PlanDesc from "./ProjectDesc/PlanDesc";
 import CookDesc from "./ProjectDesc/CookDesc";
