@@ -15,7 +15,11 @@ class Contact extends Component {
       email: "",
       phone: "",
       message: "",
-      captcha: null
+      captcha: null,
+      keys: {
+        emailjs: "",
+        recaptcha: ""
+      }
     };
   }
 
@@ -65,14 +69,21 @@ class Contact extends Component {
   keys = {};
 
   componentDidMount = () => {
-    Axios.get("/api/keys").then(response => {
-      this.keys.emailjs = response.data.ejs;
-      this.keys.recaptcha = response.data.rca;
-    });
+    if (this.state.keys.recaptcha == "")
+    {
+      Axios.get("/api/keys").then(response => {
+        this.setState({
+          ...this.state, keys: {
+            emailjs: response.data.ejs,
+            recaptcha: response.data.rca
+          }
+        });
+      });
+    }
   };
 
   render() {
-    if (this.keys.recaptcha == null) {
+    if (this.state.keys.recaptcha == "") {
       return null;
     }
     let width =
@@ -155,7 +166,7 @@ class Contact extends Component {
             <Col sm={{ size: 10, offset: 2 }}>
               <ReCAPTCHA
                 ref={this.recaptchaRef}
-                sitekey={this.keys.recaptcha}
+                sitekey={this.state.keys.recaptcha}
                 onChange={e => this.setState({ captcha: e })}
                 onExpired={() => this.setState({ captcha: null })}
               />

@@ -8,7 +8,7 @@ import {
   NavItem,
   NavLink
 } from "reactstrap";
-import { Tab, Tabs } from "@material-ui/core";
+import { Tab, Tabs } from "@mui/material";
 import "./Links.css";
 import history from "./history";
 
@@ -24,8 +24,10 @@ class Links extends Component {
       history.push(`/0`);
     }
 
+    var intTab = parseInt(tempTab)
+
     this.state = {
-      currTab: tempTab,
+      currTab: intTab,
       collapsed: false
     };
   }
@@ -60,6 +62,7 @@ class Links extends Component {
   };
 
   collides = d1 => {
+    console.log(d1)
     let d1pos = document.getElementById(d1).getBoundingClientRect();
     let d2pos = document.getElementById("mid-bar").getBoundingClientRect();
     if (d1pos.top < d2pos.top && d1pos.bottom > d2pos.top) {
