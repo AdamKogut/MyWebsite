@@ -18,6 +18,15 @@ export default function DrawerItem(props) {
     setBoxWidth(ref.current.offsetWidth + 30);
   }
 
+  function ButtonClick() {
+    SetSelectedItem(ItemId);
+    var topPos = document.getElementById(ItemId).offsetTop;
+    document.getElementById("scrolling_div").scrollTo({
+      top: topPos,
+      behavior: "smooth"
+    });
+  }
+
   React.useEffect(() => {
     RerenderBox();
     window.addEventListener("resize", RerenderBox);
@@ -32,7 +41,7 @@ export default function DrawerItem(props) {
           width: "220px",
           height: window.innerWidth > 600 ? "50px" : "80px"
         }}
-        onClick={() => SetSelectedItem(ItemId)}
+        onClick={ButtonClick}
         style={{ textAlign: "left" }}
       >
         <Typography

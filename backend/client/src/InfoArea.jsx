@@ -2,9 +2,11 @@ import React from "react";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Color1 } from "./Core/Constants/ColorConstants";
+import Grid2 from "@mui/material/Unstable_Grid2";
+import { Color5, Color2 } from "./Core/Constants/ColorConstants";
 import { DrawerWidth } from "./Core/Constants/SizeConstants";
 import HomeMain from "./Home/HomeMain";
+import AboutMain from "./About/AboutMain";
 
 export default function InfoArea(props) {
   const { isOpen, setIsOpen } = props;
@@ -16,8 +18,12 @@ export default function InfoArea(props) {
         flexGrow: 1,
         p: 3,
         width: { sm: `calc(100% - ${DrawerWidth}px)` },
-        padding: "0px"
+        padding: "0px",
+        overflowY: "auto",
+        height: "100vh",
+        overflowX: "hidden"
       }}
+      id="scrolling_div"
     >
       <IconButton
         sx={{
@@ -31,11 +37,15 @@ export default function InfoArea(props) {
           zIndex: "2"
         }}
         onClick={() => setIsOpen(!isOpen)}
-        style={{ backgroundColor: Color1 }}
+        style={{ backgroundColor: Color5 + "88" }}
+        color="default"
       >
-        <MenuIcon fontSize="large" />
+        <MenuIcon fontSize="large" sx={{ color: Color2 }} />
       </IconButton>
-      <HomeMain />
+      <Grid2 container>
+        <HomeMain />
+        <AboutMain />
+      </Grid2>
     </Box>
   );
 }

@@ -26,11 +26,11 @@ export default function DrawerContent(props) {
         SelectedItem={selectedItem}
         SetSelectedItem={setSelectedItem}
       />
-      <DrawerItem
+      {/* <DrawerItem
         ItemText="Experience"
         SelectedItem={selectedItem}
         SetSelectedItem={setSelectedItem}
-      />
+      /> */}
     </Grid2>
   );
 }
