@@ -14,12 +14,15 @@ export default function DrawerItem(props) {
 
   const IsSelected = ItemId === SelectedItem;
 
-  useLayoutEffect(
-    () => {
-      setBoxWidth(ref.current.offsetWidth + 30);
-    },
-    [window.innerWidth]
-  );
+  function RerenderBox() {
+    setBoxWidth(ref.current.offsetWidth + 30);
+  }
+
+  React.useEffect(() => {
+    RerenderBox();
+    window.addEventListener("resize", RerenderBox);
+    return () => window.removeEventListener("resize", RerenderBox);
+  }, []);
 
   return (
     <Grid2 xs={12}>
