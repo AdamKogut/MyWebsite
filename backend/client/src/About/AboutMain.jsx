@@ -1,7 +1,6 @@
 import React from "react";
 import Grid2 from "@mui/material/Unstable_Grid2";
-import { Color1, Color2 } from "../Core/Constants/ColorConstants";
-import ProfilePic from "../Images/PersonalPicture.jpeg";
+import { Color2 } from "../Core/Constants/ColorConstants";
 
 export default function AboutMain() {
   const windowHeight = window.innerHeight;

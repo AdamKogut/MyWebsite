@@ -7,6 +7,7 @@ import { Color5, Color2 } from "./Core/Constants/ColorConstants";
 import { DrawerWidth } from "./Core/Constants/SizeConstants";
 import HomeMain from "./Home/HomeMain";
 import AboutMain from "./About/AboutMain";
+import ExperienceMain from "./Experience/ExperienceMain";
 
 export default function InfoArea(props) {
   const { isOpen, setIsOpen } = props;
@@ -45,6 +46,7 @@ export default function InfoArea(props) {
       <Grid2 container>
         <HomeMain />
         <AboutMain />
+        <ExperienceMain />
       </Grid2>
     </Box>
   );
