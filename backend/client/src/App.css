@@ -45,3 +45,7 @@
   margin-left: -20%;
   padding-left: 20%;
 }
+
+Button {
+  outline: none !important;
+}
