@@ -40,7 +40,7 @@ export default function ExperienceItem(props) {
       <Grid2 xs={12} md={8}>
         {paragraphList}
       </Grid2>
-      <Grid2 xs={12} md={3} ref={ref}>
+      <Grid2 xs={12} md={3} ref={ref} style={{ textAlign: "center" }}>
         <a target="_blank" href={ImageLink}>
           <img
             src={ImageSrc}

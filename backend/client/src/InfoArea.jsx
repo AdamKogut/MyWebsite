@@ -8,6 +8,7 @@ import { DrawerWidth } from "./Core/Constants/SizeConstants";
 import HomeMain from "./Home/HomeMain";
 import AboutMain from "./About/AboutMain";
 import ExperienceMain from "./Experience/ExperienceMain";
+import EducationMain from "./Education/EducationMain";
 
 export default function InfoArea(props) {
   const { isOpen, setIsOpen } = props;
@@ -47,6 +48,7 @@ export default function InfoArea(props) {
         <HomeMain />
         <AboutMain />
         <ExperienceMain />
+        <EducationMain />
       </Grid2>
     </Box>
   );

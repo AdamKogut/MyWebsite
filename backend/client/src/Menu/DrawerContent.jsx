@@ -41,6 +41,11 @@ export default function DrawerContent(props) {
           SelectedItem={selectedItem}
           SetSelectedItem={setSelectedItem}
         />
+        <DrawerItem
+          ItemText="Education"
+          SelectedItem={selectedItem}
+          SetSelectedItem={setSelectedItem}
+        />
       </Grid2>
       <div style={{ display: "flex", justifyContent: "space-evenly" }}>
         <IconButton

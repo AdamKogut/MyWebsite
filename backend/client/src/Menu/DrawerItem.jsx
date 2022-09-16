@@ -46,7 +46,13 @@ export default function DrawerItem(props) {
       >
         <Typography
           variant={window.innerWidth > 600 ? "h6" : "h5"}
-          style={{ zIndex: 2, position: "absolute", left: "4px", top: "7px" }}
+          style={{
+            zIndex: 2,
+            position: "absolute",
+            left: "4px",
+            top: "7px",
+            color: Color1
+          }}
           gutterBottom
           ref={ref}
         >
