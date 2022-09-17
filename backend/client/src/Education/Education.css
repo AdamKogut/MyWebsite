@@ -1,0 +1,19 @@
+#Education {
+  position: relative;
+  display: flex;
+  align-content: baseline;
+}
+
+#education-title {
+  padding: 85px 10px 10px 10px;
+  color: var(--color2);
+}
+
+#education-paragraph {
+  padding: 0px 15px;
+  font-size: .9em;
+}
+
+.education-padding {
+  height: 90px;
+}

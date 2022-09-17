@@ -1,0 +1,13 @@
+#About_Me {
+  position: relative;
+}
+
+#about-title {
+  padding: 80px 10px 10px 10px;
+  color: var(--color2);
+}
+
+.about-paragraph {
+  font-size: .9em;
+  padding: 5px 15px 5px 15px;
+}

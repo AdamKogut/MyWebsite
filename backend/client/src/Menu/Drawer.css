@@ -1,0 +1,57 @@
+#drawer-container {
+  padding: 8px;
+  height: calc(100vh - 120px);
+  align-content: flex-start;
+}
+
+#drawer-div {
+  height: 100vh;
+}
+
+.icon-button-color {
+  color: var(--color1);
+}
+
+.center-div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.center-div a:hover {
+  text-decoration: none;
+}
+
+#resume-button {
+  color: var(--color1);
+  padding: 15px 0px;
+  font-size: 1.2em;
+}
+
+#drawer-button {
+  color: var(--color1);
+  width: 220px;
+  height: 50px;
+  text-align: left;
+}
+
+#drawer-button-text {
+  z-index: 2;
+  position: absolute;
+  left: 4px;
+  top: 7px;
+  color: var(--color1);
+}
+
+#drawer-button-box {
+  top: 25px;
+  left: 20px;
+  z-index: 1;
+  position: absolute;
+  height: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  #drawer-button {
+    height: 80px;
+  }
+}

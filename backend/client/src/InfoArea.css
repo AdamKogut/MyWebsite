@@ -1,0 +1,21 @@
+#scrolling-div {
+  padding: 0px;
+  overflow-y: auto;
+  height: 100vh;
+  overflow-x: hidden;
+  flex-grow: 1;
+}
+
+#hamburger-button {
+  width: 55px;
+  height: 55px;
+  border-radius: 0;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+}
+
+#hamburger-icon {
+  color: var(--color2);
+}
