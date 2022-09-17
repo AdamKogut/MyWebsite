@@ -16,7 +16,6 @@ export default function DrawerContent(props) {
   const [boxHeight, setBoxHeight] = React.useState(0);
 
   function RerenderBox() {
-    console.log(ref.current.offsetHeight + " " + closeModal);
     setBoxHeight(ref.current.offsetHeight);
   }
 
@@ -25,9 +24,7 @@ export default function DrawerContent(props) {
     window.addEventListener("resize", RerenderBox);
     return () => window.removeEventListener("resize", RerenderBox);
   }, []);
-
-  console.log(window.innerHeight);
-
+  
   return (
     <div id="drawer-div">
       <Grid2 container id="drawer-container" ref={ref}>
