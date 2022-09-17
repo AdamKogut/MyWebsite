@@ -17,6 +17,10 @@
   justify-content: space-evenly;
 }
 
+.center-div a:hover {
+  text-decoration: none;
+}
+
 #resume-button {
   color: var(--color1);
   padding: 15px 0px;
