@@ -1,6 +1,5 @@
 #drawer-container {
   padding: 8px;
-  /* height: calc(100vh - 120px); */
   align-content: flex-start;
 }
 
