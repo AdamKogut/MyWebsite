@@ -20,12 +20,13 @@ export default function EducationMain() {
         </h3>
       </Grid2>
       <Grid2 xs={12} md={8}>
-        <p style={{ padding: "0px 15px" }}>
+        <p style={{ padding: "0px 15px", fontSize: ".9em" }}>
           I went to school at Purdue University from August 2016 to May 2020
           where I came out with a Bachelors of Science in Computer Science with
           concentrations in Software Engineering and Database Management.
         </p>
       </Grid2>
+      <Grid2 xs={12} style={{ height: "90px" }} />
     </Grid2>
   );
 }

@@ -5,7 +5,9 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import DrawerItem from "./DrawerItem";
+import Resume from "../Images/AdamKogutResume.pdf";
 import { Color1 } from "../Core/Constants/ColorConstants";
+import { Button } from "@mui/material";
 
 export default function DrawerContent(props) {
   const { closeModal } = props;
@@ -17,7 +19,7 @@ export default function DrawerContent(props) {
         container
         sx={{
           padding: "8px",
-          height: "calc(100vh - 60px)",
+          height: "calc(100vh - 120px)",
           alignContent: "flex-start"
         }}
       >
@@ -47,6 +49,15 @@ export default function DrawerContent(props) {
           SetSelectedItem={setSelectedItem}
         />
       </Grid2>
+      <div style={{ justifyContent: "space-evenly", display: "flex" }}>
+        <a href={Resume} download>
+          <Button
+            style={{ color: Color1, padding: "15px 0px", fontSize: "1.2em" }}
+          >
+            My Resume
+          </Button>
+        </a>
+      </div>
       <div style={{ display: "flex", justifyContent: "space-evenly" }}>
         <IconButton
           onClick={() => window.open("https://github.com/AdamKogut", "_blank")}

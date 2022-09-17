@@ -17,7 +17,7 @@ export default function ExperienceMain() {
       container
     >
       <Grid2 xs={12}>
-        <h3 style={{ padding: "30px 10px 10px 10px", color: Color2 }}>
+        <h3 style={{ padding: "70px 10px 10px 10px", color: Color2 }}>
           Experience
         </h3>
       </Grid2>
