@@ -1,6 +1,5 @@
 #drawer-container {
   padding: 8px;
-  height: calc(100vh - 120px);
   align-content: flex-start;
 }
 
@@ -15,6 +14,8 @@
 .center-div {
   display: flex;
   justify-content: space-evenly;
+  position: absolute;
+  width: -webkit-fill-available;
 }
 
 .center-div a:hover {
@@ -48,6 +49,18 @@
   z-index: 1;
   position: absolute;
   height: 15px;
+}
+
+#drawer-resume-div {
+  bottom: 60px;
+}
+
+#drawer-icon-div {
+  bottom: 10px;
+}
+
+#drawer-button-div {
+  position: relative;
 }
 
 @media screen and (max-width: 600px) {
