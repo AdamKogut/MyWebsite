@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import { Color5 } from "../Core/Constants/ColorConstants";
 import DrawerContent from "./DrawerContent";
 import { DrawerWidth } from "../Core/Constants/SizeConstants";
-import useDrawerSwitch from "../Core/Contexts/DrawerContext";
+import "./Drawer.css";
 
 export default function DrawerMain(props) {
   const { window, isOpen, setIsOpen } = props;

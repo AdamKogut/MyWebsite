@@ -5,7 +5,7 @@ import "./HomeMain.css";
 
 export default function HomeMain() {
   return (
-    <Grid2 xs={12} style={{ position: "relative", height: "100vh" }} id="Home">
+    <Grid2 xs={12} id="Home">
       <h1 id="name">Adam Kogut</h1>
       <h3 id="occupation">Software Engineer</h3>
       <img src={ProfilePic} alt="Portrait of Adam Kogut" id="profile-picture" />

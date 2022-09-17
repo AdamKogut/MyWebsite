@@ -6,26 +6,22 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import DrawerItem from "./DrawerItem";
 import Resume from "../Images/AdamKogutResume.pdf";
-import { Color1 } from "../Core/Constants/ColorConstants";
 import { Button } from "@mui/material";
+import "./Drawer.css";
 
 export default function DrawerContent(props) {
   const { closeModal } = props;
   const [selectedItem, setSelectedItem] = React.useState("Home");
 
   return (
-    <div style={{ height: "100vh" }}>
-      <Grid2
-        container
-        sx={{
-          padding: "8px",
-          height: "calc(100vh - 120px)",
-          alignContent: "flex-start"
-        }}
-      >
+    <div id="drawer-div">
+      <Grid2 container id="drawer-container">
         <Grid2 xs={12} sx={{ display: { xs: "block", sm: "none" } }}>
           <IconButton onClick={closeModal}>
-            <ArrowBackIosNewIcon fontSize="large" sx={{ color: Color1 }} />
+            <ArrowBackIosNewIcon
+              fontSize="large"
+              className="icon-button-color"
+            />
           </IconButton>
         </Grid2>
         <DrawerItem
@@ -49,26 +45,22 @@ export default function DrawerContent(props) {
           SetSelectedItem={setSelectedItem}
         />
       </Grid2>
-      <div style={{ justifyContent: "space-evenly", display: "flex" }}>
+      <div className="center-div">
         <a href={Resume} download>
-          <Button
-            style={{ color: Color1, padding: "15px 0px", fontSize: "1.2em" }}
-          >
-            My Resume
-          </Button>
+          <Button id="resume-button">My Resume</Button>
         </a>
       </div>
-      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+      <div className="center-div">
         <IconButton
           onClick={() => window.open("https://github.com/AdamKogut", "_blank")}
         >
-          <GitHubIcon fontSize="large" sx={{ color: Color1 }} />
+          <GitHubIcon fontSize="large" className="icon-button-color" />
         </IconButton>
         <IconButton
           onClick={() =>
             window.open("https://www.linkedin.com/in/adamkogut/", "_blank")}
         >
-          <LinkedInIcon fontSize="large" sx={{ color: Color1 }} />
+          <LinkedInIcon fontSize="large" className="icon-button-color" />
         </IconButton>
       </div>
     </div>

@@ -1,0 +1,27 @@
+#Experience {
+  position: relative;
+  display: flex;
+  align-content: baseline;
+}
+
+#experience-title {
+  padding: 70px 10px 10px 10px; 
+  color: var(--color2);
+}
+
+.experience-paragraph {
+  padding: 0px 15px;
+  font-size: .9em;
+}
+
+.experience-padding {
+  padding: 0px 15px;
+}
+
+.experience-image-grid {
+  text-align: center;
+}
+
+.experience-image {
+  max-height: 150px;
+}

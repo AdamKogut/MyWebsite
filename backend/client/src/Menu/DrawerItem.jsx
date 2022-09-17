@@ -3,7 +3,7 @@ import Grid2 from "@mui/material/Unstable_Grid2";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Color1, Color4, Color3 } from "../Core/Constants/ColorConstants";
-import { useLayoutEffect } from "react";
+import "./Drawer.css";
 
 export default function DrawerItem(props) {
   const { ItemText, SelectedItem, SetSelectedItem } = props;
@@ -21,7 +21,7 @@ export default function DrawerItem(props) {
   function ButtonClick() {
     SetSelectedItem(ItemId);
     var topPos = document.getElementById(ItemId).offsetTop;
-    document.getElementById("scrolling_div").scrollTo({
+    document.getElementById("scrolling-div").scrollTo({
       top: topPos,
       behavior: "smooth"
     });
@@ -35,38 +35,20 @@ export default function DrawerItem(props) {
 
   return (
     <Grid2 xs={12}>
-      <Button
-        sx={{
-          color: Color1,
-          width: "220px",
-          height: window.innerWidth > 600 ? "50px" : "80px"
-        }}
-        onClick={ButtonClick}
-        style={{ textAlign: "left" }}
-      >
+      <Button id="drawer-button" onClick={ButtonClick}>
         <Typography
           variant={window.innerWidth > 600 ? "h6" : "h5"}
-          style={{
-            zIndex: 2,
-            position: "absolute",
-            left: "4px",
-            top: "7px",
-            color: Color1
-          }}
+          id="drawer-button-text"
           gutterBottom
           ref={ref}
         >
           {ItemText}
         </Typography>
         <div
+          id="drawer-button-box"
           style={{
-            position: "absolute",
             width: boxWidth,
-            height: "15px",
-            backgroundColor: IsSelected ? Color3 : Color4,
-            top: "25px",
-            left: "20px",
-            zIndex: 1
+            backgroundColor: IsSelected ? Color3 : Color4
           }}
         />
       </Button>

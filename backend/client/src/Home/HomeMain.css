@@ -28,6 +28,11 @@
   height: 100vh;
 }
 
+#Home {
+  position: relative; 
+  height: 100vh;
+}
+
 @media screen and (max-width: 639px) {
   #name {
     font-size: 3.6em;

@@ -9,7 +9,6 @@
 .App {
   text-align: center;
   margin-left: 10%;
-  /* background-color: var(--color1); */
 }
 
 .scrolling-div {
@@ -48,4 +47,8 @@
 
 Button {
   outline: none !important;
+}
+
+#PageBox {
+  display: flex;
 }

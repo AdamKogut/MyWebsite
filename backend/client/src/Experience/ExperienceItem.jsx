@@ -1,5 +1,6 @@
 import React from "react";
 import Grid2 from "@mui/material/Unstable_Grid2";
+import "./Experience.css";
 
 export default function ExperienceItem(props) {
   const { Title, InfoText, ImageSrc, Timeline, ImageLink } = props;
@@ -19,7 +20,7 @@ export default function ExperienceItem(props) {
   const paragraphList = [];
   for (var pItem in InfoText.split("\n")) {
     paragraphList.push(
-      <p style={{ padding: "0px 15px", fontSize: ".9em" }} key={pItem}>
+      <p className="experience-paragraph" key={pItem}>
         {InfoText.split("\n")[pItem]}
       </p>
     );
@@ -28,23 +29,24 @@ export default function ExperienceItem(props) {
   return (
     <React.Fragment>
       <Grid2 xs={12}>
-        <h5 style={{ padding: "0px 15px" }}>
+        <h5 className="experience-padding">
           {Title}
         </h5>
       </Grid2>
       <Grid2 xs={12}>
-        <h6 style={{ padding: "0px 15px" }}>
+        <h6 className="experience-padding">
           {Timeline}
         </h6>
       </Grid2>
       <Grid2 xs={12} md={8}>
         {paragraphList}
       </Grid2>
-      <Grid2 xs={12} md={3} ref={ref} style={{ textAlign: "center" }}>
+      <Grid2 xs={12} md={3} ref={ref} className="experience-image-grid">
         <a target="_blank" href={ImageLink}>
           <img
             src={ImageSrc}
-            style={{ maxHeight: "150px", maxWidth: boxWidth }}
+            style={{ maxWidth: boxWidth }}
+            className="experience-image"
           />
         </a>
       </Grid2>

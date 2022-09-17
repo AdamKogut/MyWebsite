@@ -8,7 +8,7 @@ export default function App() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <Box sx={{display:'flex'}}>
+    <Box id="PageBox">
       <DrawerMain isOpen={isOpen} setIsOpen={setIsOpen}/>
       <InfoArea isOpen={isOpen} setIsOpen={setIsOpen}/>
     </Box>

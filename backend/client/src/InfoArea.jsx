@@ -3,12 +3,13 @@ import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Grid2 from "@mui/material/Unstable_Grid2";
-import { Color5, Color2 } from "./Core/Constants/ColorConstants";
+import { Color5 } from "./Core/Constants/ColorConstants";
 import { DrawerWidth } from "./Core/Constants/SizeConstants";
 import HomeMain from "./Home/HomeMain";
 import AboutMain from "./About/AboutMain";
 import ExperienceMain from "./Experience/ExperienceMain";
 import EducationMain from "./Education/EducationMain";
+import "./InfoArea.css";
 
 export default function InfoArea(props) {
   const { isOpen, setIsOpen } = props;
@@ -17,32 +18,20 @@ export default function InfoArea(props) {
     <Box
       component="main"
       sx={{
-        flexGrow: 1,
-        p: 3,
-        width: { sm: `calc(100% - ${DrawerWidth}px)` },
-        padding: "0px",
-        overflowY: "auto",
-        height: "100vh",
-        overflowX: "hidden"
+        width: { sm: `calc(100% - ${DrawerWidth}px)` }
       }}
-      id="scrolling_div"
+      id="scrolling-div"
     >
       <IconButton
         sx={{
-          display: { xs: "block", sm: "none" },
-          width: 55,
-          height: 55,
-          borderRadius: 0,
-          position: "fixed",
-          left: "10px",
-          top: "10px",
-          zIndex: "2"
+          display: { xs: "block", sm: "none" }
         }}
         onClick={() => setIsOpen(!isOpen)}
         style={{ backgroundColor: Color5 + "88" }}
         color="default"
+        id="hamburger-button"
       >
-        <MenuIcon fontSize="large" sx={{ color: Color2 }} />
+        <MenuIcon fontSize="large" id="hamburger-icon" />
       </IconButton>
       <Grid2 container>
         <HomeMain />
